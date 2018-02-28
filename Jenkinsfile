@@ -14,5 +14,10 @@ sh 'java -jar rectangle.jar 4 9'
 }
 
 }
+post {
+ success {
+archiveArtifacts artifacts: 'rectangle.jar', defaultExcludes: false, fingerprint: true, onlyIfSuccessful: true
+}
+}
  }
 }
